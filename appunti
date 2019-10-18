@@ -1,0 +1,23 @@
+Naturally, the right values for the weights and biases determines the strength of the predictions. The process of
+fine-tuning the weights and biases from the input data is known as training the Neural Network.
+
+Calculating the predicted output ŷ, known as feedforward
+
+Updating the weights and biases, known as backpropagation
+
+Error is calculated by taking the difference from the desired output from the data and the predicted output. This
+creates our gradient descent, which we can use to alter the weights
+
+The gradient descent algorithm in this sample has two functions. First there's the gradient_step function
+and second there's the gradient_descent function. The gradient_descent function iteratively calls the
+gradient_step function with the current weights and inputs. The gradient_step function takes the original
+weights and inputs. It then calculates the gradients for all the points in the dataset x and uses these
+gradients to update the bias and weight.
+
+By running this algorithm a number of times you will see that the weights decrease until they reach their optimal value.
+
+how to find out the structure of the models:
+
+
+
+
