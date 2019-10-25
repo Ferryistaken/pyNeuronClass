@@ -18,6 +18,8 @@ By running this algorithm a number of times you will see that the weights decrea
 
 how to find out the structure of the models:
 
+ If the system output is y, and the desired system output is known to be d, the error signal can be defined as:
 
+ e = d - y
 
 
