@@ -23,3 +23,8 @@ how to find out the structure of the models:
  e = d - y
 
 
+ however this is "better":
+
+e = 1/2(d - y)^2
+
+
