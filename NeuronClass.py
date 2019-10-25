@@ -1,12 +1,12 @@
 import numpy as np
 from numpy import exp, array, random, dot, tanh
 from configparser import ConfigParser
-from backPropagation.gradientDescent import firstGradient
+from errorCorrection.gradientDescent import firstGradient
 
 # random weight between 0 and 1
-def randomWeights():
+def randomWeights(n):
     # create an array of floats w/ minimun value of -1, max of 1 and of size 5
-    weightArray = np.random.uniform(low = -1, high = 1, size = (1, 5))
+    weightArray = np.random.uniform(low = -1, high = 1, size = (1, n))
 
     # i might find a use for this later
     randWeights = random.uniform(0, 1)

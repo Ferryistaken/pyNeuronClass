@@ -16,6 +16,11 @@ gradients to update the bias and weight.
 
 By running this algorithm a number of times you will see that the weights decrease until they reach their optimal value.
 
+A neuron takes a group of weighted inputs, applies an activation function, and returns an output.
+
+ex with sigmoid fun=
+sigmoid(input1xweight1 + inputNxWeightN) = output
+
 how to find out the structure of the models:
 
  If the system output is y, and the desired system output is known to be d, the error signal can be defined as:
