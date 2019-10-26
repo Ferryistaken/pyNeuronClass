@@ -2,8 +2,12 @@ import numpy as np
 from PIL import Image
 import matplotlib.pyplot as plt
 
+width = 320
+height = 180
+
 img = Image.open('0001.jpg').convert('RGBA') # i should prob use rgb since the change is minimal and it will be a 4 channel data type
-arr = np.array(img)
+resImg = img.resize((width, height), Image.NEAREST)
+arr = np.array(resImg)
 
 print(arr)
 print(arr.shape)
