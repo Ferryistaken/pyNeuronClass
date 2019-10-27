@@ -13,16 +13,16 @@ def randomWeights(n):
     return weightArray
 
 # this is to test if other values are array of floats
-testArray = np.array(randomWeights())
+#testArray = np.array(randomWeights())
 
 
 class Neuron:
     def __init__(self, id, weights, f):
-        if type(weights) == type(testArray):
-            self._weights = weights
-        else:
-            print("The weights you entered aren't a vector of floats. What you entered : " + str(weights) + " The data type of your values = " +
-                  str(type(weights)))
+#        if type(weights) == type(testArray):
+        self._weights = weights
+#        else:
+#            print("The weights you entered aren't a vector of floats. What you entered : " + str(weights) + " The data type of your values = " +
+#                  str(type(weights)))
         self._f = f
         self.id = id
 
@@ -40,7 +40,12 @@ class Neuron:
 
     # computing output regardless of knowing the actual output
     def computeOutput(self, inputs):
-        self._output = self._f(self._inputs * self._weights)
+        self._output = self._f(np.dot(inputs, self._weights))
+        self._inputs = inputs
+        return(0)
+
+    def getOutput(self):
+        return(self._output)
 
     # during training it sees if the output is different from the input("training function")
     def feedForward(self, inputs, trainOutputs):
